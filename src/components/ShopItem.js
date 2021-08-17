@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 export default function ShopItem(props) {
   const { name, price, color, img } = props.items;
 
@@ -12,3 +14,12 @@ export default function ShopItem(props) {
     </div>
   );
 }
+
+ShopItem.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    price: PropTypes.string,
+    color: PropTypes.string,
+    img: PropTypes.string,
+  })),
+};

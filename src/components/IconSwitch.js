@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
 export default function IconSwitch(props) {
@@ -13,5 +14,9 @@ export default function IconSwitch(props) {
       <div className="material-icons" onClick={onSwitch}>{icon}</div>
     </div>
   );
-
 }
+
+IconSwitch.propTypes = {
+  icon: PropTypes.string,
+  onSwitch: PropTypes.func,
+};
